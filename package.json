@@ -5,7 +5,15 @@
     "dev": "vite",
     "build": "vite build --mode client && vite build",
     "preview": "wrangler dev",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "migrate": "tsx scripts/migrate.ts",
+    "db:create": "wrangler d1 create wordcross-cms",
+    "db:migrate": "wrangler d1 execute wordcross-cms --file=migrations/001-initial.sql",
+    "db:shell": "wrangler d1 execute wordcross-cms --command",
+    "test": "vitest",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:watch": "vitest watch"
   },
   "private": true,
   "dependencies": {
@@ -19,8 +27,12 @@
     "@hono/vite-build": "^1.3.0",
     "@hono/vite-dev-server": "^0.18.2",
     "@tailwindcss/vite": "^4.0.9",
+    "@types/node": "^22.0.0",
     "tailwindcss": "^4.0.9",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
     "vite": "^6.3.5",
+    "vitest": "^2.0.0",
     "wrangler": "^4.4.0"
   }
 }
