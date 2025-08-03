@@ -18,6 +18,8 @@
   "private": true,
   "dependencies": {
     "@hono/zod-validator": "^0.7.2",
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^3.0.2",
     "hono": "^4.8.12",
     "honox": "^0.1.43",
     "zod": "^4.0.14"

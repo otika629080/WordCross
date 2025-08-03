@@ -166,7 +166,8 @@ export interface Env {
 
 // Context variables for Hono
 export interface Variables {
-  db: D1Database
+  db: ReturnType<typeof import('../lib/db').createDatabase>
+  database: ReturnType<typeof import('../lib/db').createDatabase>
   user?: AdminUser
 }
 

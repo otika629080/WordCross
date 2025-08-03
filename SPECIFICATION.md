@@ -16,3 +16,13 @@ MVP段階ではGoogle Siteと同程度のノーコードサイトビルダーで
 コーディング規約
 - any型の使用を禁止する
 - スタイリングはtailwindCSSのみを使い、通常のcssは使わない。
+
+
+Admin user details:
+Email: admin@wordcross.local
+Password: admin123
+Password Hash: $2b$12$sq3pKjj4Fo1yHqCtLXxgwOe7C79wREidO.VxJRH6Exj69N1g39rHy
+Name: Admin User
+
+SQL to run:
+INSERT INTO admin_users (email, password_hash, name, is_active) VALUES ('admin@wordcross.local', '$2b$12$sq3pKjj4Fo1yHqCtLXxgwOe7C79wREidO.VxJRH6Exj69N1g39rHy', 'Admin User', TRUE);
